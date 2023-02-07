@@ -28,6 +28,7 @@ local M = {
       "typescript",
       "vim",
       "yaml",
+	  "python",
     },
     incremental_selection = {
       enable = true,
