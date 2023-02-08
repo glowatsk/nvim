@@ -144,7 +144,6 @@ local M = {
 					-- nls.builtins.formatting.prettierd,
 					nls.builtins.formatting.stylua,
 					nls.builtins.diagnostics.ruff,
-					nls.builtins.diagnostics.black,
 				},
 			}
 		end,
