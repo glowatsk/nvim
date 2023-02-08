@@ -8,8 +8,8 @@ local M = {
 			"stylua",
 			"shellcheck",
 			"shfmt",
-			"flake8",
 			"black",
+			"ruff",
 		},
 	},
 	---@param opts MasonSettings | {ensure_installed: string[]}
