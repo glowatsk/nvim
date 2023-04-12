@@ -26,4 +26,3 @@ local M = {
 }
 
 return M
-

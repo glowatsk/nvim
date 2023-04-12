@@ -7,7 +7,7 @@ local M = {
 			{ "folke/neodev.nvim", opts = { experimental = { pathStrict = true } } },
 			"mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
-				"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-nvim-lsp",
 		},
 		---@class PluginLspOpts
 		opts = {
@@ -83,7 +83,7 @@ local M = {
 			end)
 
 			-- diagnostics
-			-- 
+			--
 			local icons = require("util.icons")
 
 			for name, icon in pairs(icons.diagnostics) do
@@ -133,14 +133,15 @@ local M = {
 	},
 	{
 		"jose-elias-alvarez/null-ls.nvim",
-		event = "BufReadPre",
+		event = { "BufReadPre", "BufNewFile" },
 		dependencies = { "mason.nvim" },
 		opts = function()
 			local nls = require("null-ls")
 			return {
+				root_dir = require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile", ".git"),
 				sources = {
-					-- nls.builtins.formatting.prettierd,
 					nls.builtins.formatting.stylua,
+					nls.builtins.formatting.shfmt,
 					nls.builtins.diagnostics.ruff,
 				},
 			}
@@ -149,4 +150,3 @@ local M = {
 }
 
 return M
-

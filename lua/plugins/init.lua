@@ -9,7 +9,7 @@ M = {
 	{ "nvim-lua/plenary.nvim", lazy = true },
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{ "MunifTanjim/nui.nvim", lazy = true },
-	{ "catppuccin/nvim", name = "catppuccin" }
+	{ "catppuccin/nvim", name = "catppuccin" },
 }
 
 return M
