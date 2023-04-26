@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("options")
 require("lazy").setup("plugins", opts)
-vim.cmd.colorscheme("catppuccin-frappe")
 
 local function map(mode, lhs, rhs, opts)
 	opts = opts or {}
