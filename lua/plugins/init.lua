@@ -9,13 +9,19 @@ M = {
 	{ "nvim-lua/plenary.nvim", lazy = true },
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{ "MunifTanjim/nui.nvim", lazy = true },
-	{ "catppuccin/nvim", name = "catppuccin" },
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		config = function()
+			vim.cmd("colorscheme catppuccin")
+		end,
+	},
 	{
 		"felipeagc/fleet-theme-nvim",
 		dependencies = { "rktjmp/lush.nvim" }, -- lush.nvim is required
-		config = function()
-			vim.cmd("colorscheme fleet")
-		end,
+		-- config = function()
+		-- 	vim.cmd("colorscheme fleet")
+		-- end,
 	},
 }
 
