@@ -9,19 +9,30 @@ M = {
 	{ "nvim-lua/plenary.nvim", lazy = true },
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{ "MunifTanjim/nui.nvim", lazy = true },
+	-- {
+	-- 	"catppuccin/nvim",
+	-- 	config = function()
+	-- 		vim.cmd("colorscheme catppuccin")
+	-- 	end,
+	-- },
+	-- {
+	-- 	"felipeagc/fleet-theme-nvim",
+	-- 	dependencies = { "rktjmp/lush.nvim" }, -- lush.nvim is required
+	-- 	config = function()
+	-- 		vim.cmd("colorscheme fleet")
+	-- 	end,
+	-- },
+	-- {
+	-- 	"rebelot/kanagawa.nvim",
+	-- 	config = function()
+	-- 		vim.cmd("colorscheme kanagawa")
+	-- 	end,
+	-- },
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
+		"embark-theme/vim",
 		config = function()
-			vim.cmd("colorscheme catppuccin")
+			vim.cmd("colorscheme embark")
 		end,
-	},
-	{
-		"felipeagc/fleet-theme-nvim",
-		dependencies = { "rktjmp/lush.nvim" }, -- lush.nvim is required
-		-- config = function()
-		-- 	vim.cmd("colorscheme fleet")
-		-- end,
 	},
 }
 
