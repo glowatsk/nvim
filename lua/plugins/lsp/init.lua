@@ -9,9 +9,8 @@ local M = {
 			"williamboman/mason-lspconfig.nvim",
 			"hrsh7th/cmp-nvim-lsp",
 		},
-		---@class PluginLspOpts
+
 		opts = {
-			-- options for vim.diagnostic.config()
 			diagnostics = {
 				underline = true,
 				update_in_insert = false,
@@ -27,8 +26,7 @@ local M = {
 				formatting_options = nil,
 				timeout_ms = nil,
 			},
-			-- LSP Server Settings
-			---@type lspconfig.options
+
 			servers = {
 				jsonls = {},
 				lua_ls = {
@@ -72,7 +70,6 @@ local M = {
 				-- ["*"] = function(server, opts) end,
 			},
 		},
-		---@param opts PluginLspOpts
 		config = function(plugin, opts)
 			-- setup autoformat
 			require("plugins.lsp.format").autoformat = opts.autoformat
@@ -82,8 +79,6 @@ local M = {
 				require("plugins.lsp.keymaps").on_attach(client, buffer)
 			end)
 
-			-- diagnostics
-			--
 			local icons = require("util.icons")
 
 			for name, icon in pairs(icons.diagnostics) do
