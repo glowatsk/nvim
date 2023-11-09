@@ -13,7 +13,7 @@ local M = {
 		return {
 			completion = {
 				completeopt = "menu,menuone,noinsert",
-				keyword_length = 2,
+				keyword_length = 1,
 			},
 			snippet = {
 				expand = function(args)
@@ -28,10 +28,10 @@ local M = {
 				["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 			}),
 			sources = cmp.config.sources({
-				{ name = "copilot", group_index = 2 },
-				{ name = "nvim_lsp", group_index = 2 },
-				{ name = "luasnip", group_index = 2 },
-				{ name = "buffer", group_index = 2 },
+				{ name = "copilot", group_index = 2, priority = 8 },
+				{ name = "nvim_lsp", group_index = 2, priority = 7 },
+				{ name = "luasnip", group_index = 2, priority = 3 },
+				{ name = "buffer", group_index = 2, priority = 5 },
 				{ name = "path", group_index = 2 },
 			}),
 			formatting = {

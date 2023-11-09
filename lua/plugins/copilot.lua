@@ -3,8 +3,8 @@ local M = {
 	cmd = "Copilot",
 	build = ":Copilot auth",
 	opts = {
-		suggestion = { enabled = false },
-		panel = { enabled = false },
+		suggestion = { enabled = false, auto_trigger = true },
+		panel = { enabled = false, auto_refresh = true, open = "<S-`>" },
 		filetypes = {
 			markdown = true,
 			help = true,
